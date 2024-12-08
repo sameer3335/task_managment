@@ -1,0 +1,190 @@
+{
+	"collection": {
+	  "info": {
+		"_postman_id": "80745dde-d0c5-4d7f-af0a-4b5c130d1d5d",
+		"name": "task management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"updatedAt": "2024-12-08T18:25:47.000Z",
+		"createdAt": "2024-12-08T17:30:22.000Z",
+		"lastUpdatedBy": "40285691",
+		"uid": "40285691-80745dde-d0c5-4d7f-af0a-4b5c130d1d5d"
+	  },
+	  "item": [
+		{
+		  "name": "http://localhost:3000/tasks",
+		  "id": "ca25a146-18e8-4e0d-91d8-0e5bdbb05e9e",
+		  "protocolProfileBehavior": {
+			"disableBodyPruning": true
+		  },
+		  "request": {
+			"method": "POST",
+			"header": [],
+			"body": {
+			  "mode": "raw",
+			  "raw": "{\r\n    \"title\": \"coding test\",\r\n    \"description\": \"A simple description\",\r\n    \"status\": \"TODO\",\r\n    \"priority\": \"MEDIUM\",\r\n    \"dueDate\": \"2024-12-31T00:00:00.000Z\"\r\n}\r\n",
+			  "options": {
+				"raw": {
+				  "language": "json"
+				}
+			  }
+			},
+			"url": {
+			  "raw": "http://localhost:3000/tasks",
+			  "protocol": "http",
+			  "host": [
+				"localhost"
+			  ],
+			  "port": "3000",
+			  "path": [
+				"tasks"
+			  ]
+			}
+		  },
+		  "response": [],
+		  "uid": "40285691-ca25a146-18e8-4e0d-91d8-0e5bdbb05e9e"
+		},
+		{
+		  "name": "http://localhost:3000/tasks",
+		  "id": "88a9ec7d-3fa1-4284-a634-377274cddc96",
+		  "protocolProfileBehavior": {
+			"disableBodyPruning": true
+		  },
+		  "request": {
+			"method": "GET",
+			"header": [],
+			"url": {
+			  "raw": "http://localhost:3000/tasks",
+			  "protocol": "http",
+			  "host": [
+				"localhost"
+			  ],
+			  "port": "3000",
+			  "path": [
+				"tasks"
+			  ]
+			}
+		  },
+		  "response": [],
+		  "uid": "40285691-88a9ec7d-3fa1-4284-a634-377274cddc96"
+		},
+		{
+		  "name": "http://localhost:3000/tasks/:id",
+		  "id": "c3019e04-783e-42ab-acb3-c6bbea03365a",
+		  "protocolProfileBehavior": {
+			"disableBodyPruning": true
+		  },
+		  "request": {
+			"method": "GET",
+			"header": [],
+			"body": {
+			  "mode": "raw",
+			  "raw": "",
+			  "options": {
+				"raw": {
+				  "language": "json"
+				}
+			  }
+			},
+			"url": {
+			  "raw": "http://localhost:3000/tasks/:id",
+			  "protocol": "http",
+			  "host": [
+				"localhost"
+			  ],
+			  "port": "3000",
+			  "path": [
+				"tasks",
+				":id"
+			  ],
+			  "variable": [
+				{
+				  "id": "d467ac89-8bb1-4a67-a0ae-f5bc5b8b678c",
+				  "key": "id",
+				  "value": "6755de5f0a547d889382c381"
+				}
+			  ]
+			}
+		  },
+		  "response": [],
+		  "uid": "40285691-c3019e04-783e-42ab-acb3-c6bbea03365a"
+		},
+		{
+		  "name": "http://localhost:3000/tasks/:id",
+		  "id": "84de0763-a8b5-4f30-a09d-3813831f2a40",
+		  "protocolProfileBehavior": {
+			"disableBodyPruning": true
+		  },
+		  "request": {
+			"method": "DELETE",
+			"header": [],
+			"url": {
+			  "raw": "http://localhost:3000/tasks/:id",
+			  "protocol": "http",
+			  "host": [
+				"localhost"
+			  ],
+			  "port": "3000",
+			  "path": [
+				"tasks",
+				":id"
+			  ],
+			  "variable": [
+				{
+				  "key": "id",
+				  "value": "6755e30e8460b852a1e98ac2"
+				}
+			  ]
+			}
+		  },
+		  "response": [],
+		  "uid": "40285691-84de0763-a8b5-4f30-a09d-3813831f2a40"
+		},
+		{
+		  "name": "http://localhost:3000/tasks?status=TODO&priority=HIGH&sort=createdAt:asc&limit=5&skip=0\n",
+		  "id": "09d469d6-e3c6-4210-8eea-e17100d69984",
+		  "protocolProfileBehavior": {
+			"disableBodyPruning": true
+		  },
+		  "request": {
+			"method": "GET",
+			"header": [],
+			"url": {
+			  "raw": "http://localhost:3000/tasks?status=TODO&priority=HIGH&sort=createdAt:asc&limit=5&skip=0\n",
+			  "protocol": "http",
+			  "host": [
+				"localhost"
+			  ],
+			  "port": "3000",
+			  "path": [
+				"tasks"
+			  ],
+			  "query": [
+				{
+				  "key": "status",
+				  "value": "TODO"
+				},
+				{
+				  "key": "priority",
+				  "value": "HIGH"
+				},
+				{
+				  "key": "sort",
+				  "value": "createdAt:asc"
+				},
+				{
+				  "key": "limit",
+				  "value": "5"
+				},
+				{
+				  "key": "skip",
+				  "value": "0\n"
+				}
+			  ]
+			}
+		  },
+		  "response": [],
+		  "uid": "40285691-09d469d6-e3c6-4210-8eea-e17100d69984"
+		}
+	  ]
+	}
+  }
